@@ -126,6 +126,8 @@ def process_offset_y(
         if scale_y == 'lin':
             # linear scaling doesn't need any offset
             return 0.0
+        elif min_val > 0:
+            return 0.0
 
     return 1.0 - min_val
 
